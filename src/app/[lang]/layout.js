@@ -4,6 +4,7 @@ import Headr from "@/components/Headr";
 import { ThemeProvider } from 'next-themes';
 import {Providers} from "./providers";
 import { getDictionary } from './dictionaries'
+import Navbar from "@/components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default async function RootLayout({ children,params }) {
       <ThemeProvider attribute="class" defaultTheme="system"> 
       <Providers>
        <Headr lang={lang}/>
+       <Navbar/>
         {children}
         </Providers>
         </ThemeProvider>

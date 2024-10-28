@@ -49,7 +49,7 @@ export default async function Home({ searchParams, }) {
 
   return (
     <div>
-       <Results results={movies} />
+       <Results results={moviesData.results} />
     </div>
   );
 }

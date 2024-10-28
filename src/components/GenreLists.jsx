@@ -13,7 +13,7 @@ export default function GenreLists() {
     <div className="relative inline-block text-left">
       <button 
         onClick={toggleDropdown}
-        className="dark:hover:text-primary-hover hover:text-primary-hover inline-flex w-full justify-between items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-light dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus:ring-primary-dark"
+        className="dark:hover:text-primary-hover hover:text-primary-hover inline-flex w-full justify-between items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-gray-200 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-light dark:bg-gray-900 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus:ring-primary-dark"
       >
         التصنيفات
         <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -22,7 +22,7 @@ export default function GenreLists() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800 dark:text-gray-300">
+        <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-gray-200 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800 dark:text-gray-300">
           <ul className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             <li>
               <Link 

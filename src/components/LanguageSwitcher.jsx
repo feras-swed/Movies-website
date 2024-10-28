@@ -26,7 +26,7 @@ export default  function LanguageSwitcher({lang}) {
   return (
 
     <div>   
-    <select onChange={(e) => handleLanguageChange(e.target.value)} value={lang}> {/* إضافة value={lang} */}
+    <select className=" bg-gray-200 border-primary-light w-full rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-light dark:bg-gray-900 dark:border-gray-700 dark:focus:ring-primary-dark" onChange={(e) => handleLanguageChange(e.target.value)} value={lang}> {/* إضافة value={lang} */}
     {locales.map((locale) => (
       <option key={locale} value={locale}>
         {/* Add translations here */}

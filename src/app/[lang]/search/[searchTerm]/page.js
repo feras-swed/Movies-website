@@ -1,8 +1,7 @@
-import Results from '@/components/Results';
+import Results from "@/components/Results";
 
 export default async function SearchPage({ params }) {
-
-    const { lang } = await params; // ها هنا، أنت تنتظر
+  const { lang } = await params; // ها هنا، أنت تنتظر
   const seachTerm = (await params).searchTerm;
 
   const res = await fetch(
@@ -14,7 +13,7 @@ export default async function SearchPage({ params }) {
     <div>
       {results &&
         results.length ===
-        <h1 className='text-center pt-6'>No results found</h1>}
+        <h1 className="text-center pt-6">No results found</h1>}
       {results && <Results results={results} />}
     </div>
   );

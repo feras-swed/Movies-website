@@ -1,32 +1,14 @@
-import Results from '@/components/Results';
-import { fetchData } from '@/utils/api';
-
-const fetchTrendingMovies = async (genre,lang) => {
-  const timeWindow = 'week'; 
-  return await fetchData(`${genre === 'fetchTopRated' ? `/movie/top_rated` : `/trending/all/${timeWindow}`}`,`${lang}`);
-};
+import FeatshTrendingData from '@/components/FeatshTrendingData';
 
 
 
-
-export default async function Home({ searchParams ,params }) {
-  const { lang } = await params;
-  const genre = await searchParams.genre || 'fetchTrending';
-
-  let moviesData;
-
-  try {
-    moviesData = await fetchTrendingMovies(genre,lang);
-
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return <div>Error loading data.....</div>;
-  }
-
+export default async function Home({ params, searchParams }) {
+  const { lang } = await params; // ها هنا، أنت تنتظر
+  const genre = (await searchParams).genre || 'fetchTrending'; // ها هنا، أنت تنتظر
 
   return (
     <div>
-       <Results results={moviesData.results} />
+      <FeatshTrendingData genre={genre} lang={lang} />
     </div>
   );
 }

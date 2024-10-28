@@ -25,13 +25,7 @@ export default function Headr({lang}) {
         </Link>
       </nav>
       <LanguageSwitcher lang={lang}/>
-      <div> 
-        <input 
-          type="text" 
-          placeholder="ابحث عن فيلم..." 
-          className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-light dark:bg-gray-900 dark:border-gray-700 dark:focus:ring-primary-dark" 
-        />
-      </div>
+
 
       <ThemeSwitcher />
     </header>

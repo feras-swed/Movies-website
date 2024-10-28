@@ -36,7 +36,7 @@ export default async function RootLayout({ children,params }) {
       <ThemeProvider attribute="class" defaultTheme="system"> 
       <Providers>
        <Headr lang={lang}/>
-       <Navbar/>
+       <Navbar lang={lang}/>
         {children}
         </Providers>
         </ThemeProvider>

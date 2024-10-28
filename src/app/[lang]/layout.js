@@ -24,7 +24,7 @@ export const metadata = {
 
 
 export default async function RootLayout({ children,params }) {
-  const { lang } = await params
+  const { lang } = await params;
   const dict =  await getDictionary(lang)
 
   return (
